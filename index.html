@@ -65,7 +65,7 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
   <script>
-    
+
     // Obtener la ubicación del usuario
     let defaultLatitude = 40.6970193
     let defaultLongitude = -74.3093228
@@ -106,7 +106,7 @@
 
     function checkLocation() {
       let { lat, lng } = marker.getLatLng()
-      fetch(`http://router.project-osrm.org/route/v1/driving/${warehouseLongitude},${warehouseLatitude};${lng},${lat}?overview=false&skip_waypoints=true`)
+      fetch(`https://router.project-osrm.org/route/v1/driving/${warehouseLongitude},${warehouseLatitude};${lng},${lat}?overview=false&skip_waypoints=true`)
         .then(response => response.json())
         .then(data => {
           let milesPerMeter = 1609.344;
